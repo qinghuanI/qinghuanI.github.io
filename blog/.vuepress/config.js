@@ -2,7 +2,7 @@ module.exports = {
   title: "qinghuanI", // Title for the site. This will be displayed in the navbar.
   theme: "@vuepress/theme-blog",
   port: 3002,
-  base: "/my-blog/",
+  base: "/",
   themeConfig: {
     // Please keep looking down to see the available options.
     dateFormat: "YYYY-MM-DD",
