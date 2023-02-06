@@ -5,6 +5,32 @@ module.exports = {
   base: "/",
   themeConfig: {
     // Please keep looking down to see the available options.
+    nav: [
+      {
+        text: "博客",
+        link: "/",
+      },
+      {
+        text: "标签",
+        link: "/tag/",
+      },
+      // TODO: support it in coming soon
+      // {
+      //   text: "读书",
+      //   link: "/read/",
+      // },
+      // {
+      //   text: "笔记",
+      //   link: "/notes/",
+      // },
+      {
+        text: "关于我",
+        link: "/about/",
+      },
+    ],
+    sidebar: {
+      "/read/": [{ title: "阅读", path: "/read/", children: [] }],
+    },
     dateFormat: "YYYY-MM-DD",
     footer: {
       contact: [
