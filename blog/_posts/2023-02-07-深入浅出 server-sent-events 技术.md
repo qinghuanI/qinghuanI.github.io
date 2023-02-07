@@ -102,8 +102,8 @@ evtSource.close();
 
 在平常的工作中，每次写 SSE 的事件监听和错误处理会很麻烦。多个业务场景需要使用 SSE 时，就需要对 SSE 进行封装。接下来我们尝试封装一个简单的 SSE SDK，方便在项目中使用
 
-当我们决定写 SSE 的 SDK, 首先想到使用面向对象的方式进行封装。根据 SSE 的特性，这么库需要满足 `subscribe` 和 `unsubscribe`
-SSE 连接的基本功能。通过确定 `SSE` 库使用方式，根据使用方式确定 SDK 的实现。我们可以在代码中这样使用，如下所示
+当我们决定写 SSE 的 SDK 时，首先想到使用面向对象（OOP）进行封装。根据 SSE 的特性，那么库需要实现 `subscribe` 和 `unsubscribe`
+两个方法。通过确定 `SSE` 库使用方式，根据使用方式确定 SDK 的实现。我们可以在代码中这样使用，如下所示
 
 ```js
 // SSESdk 实例化
@@ -118,8 +118,8 @@ SSE.subscribe("message", (data) => {
 SSE.unsuscribe();
 ```
 
-我们要封装的库对外仅仅提供 `subscribe` 和 `unsubscribe` 两个 api，非常方便使用。通过使用形式可以看出，使用 ES6 中的类语法。接下来，我们
-先确定 SSE SDK 的大体结构
+我们要封装的库对外仅仅提供 `subscribe` 和 `unsubscribe` 两个 Api，非常方便开发人员使用。
+`subscribe` 用来订阅来自服务端的消息， `unsubscribe` 用来取消订阅，关闭 SSE 连接，通过使用形式可以看出，使用 ES6 中的类语法。接下来我们先确定 SSE SDK 的大体结构
 
 ```js
 class SSEClient {
@@ -131,9 +131,9 @@ class SSEClient {
 }
 ```
 
-在 `SSEClient` 类中有三个方法需要实现，通过 constructor 接受可配置的参数，比如 SSE 建立链接失败后的重试次数和重试时间。
+在 `SSEClient` 类中有三个方法需要实现，通过 constructor 接受可配置的参数，比如 SSE 建立连接失败后的重试次数和重试时间。
 `subscribe` 接收一个与后端保持一致的事件名和一个回调函数。`unsunscribe` 不需要传递任何参数，调用 `unsunscribe` 方法关闭
-SSE 连接。
+SSE 连接
 
 ```js
 // SSE-client.js
@@ -179,11 +179,10 @@ class SSEClient {
 }
 ```
 
-就这样实现了一个简单的 `SSE` SDK。首先根据 url 参数创建一个 `SSEClient` 实例，当调用 `subscribe` 方法时，才会根据传入的 url 建立 `SSE` 链接，然后监听对应的事件，一旦
+就这样实现了一个简单的 `SSE` SDK。首先根据 url 参数创建一个 `SSEClient` 实例，当调用 `subscribe` 方法时，才会根据传入的 url 建立 `SSE` 连接，然后监听对应的事件，一旦
 连接建立成功，后端向客户端发送数据，就可以从 `handler` 方法中拿到数据
 
-这个库仅仅实现了非常基本的功能，代码封装上存在很多问题。比如 `es` 的事件全部杂糅在 `subscribe` 方法中、缺少 `SSE` 连接建立失败的重试等等
-接下来，我们对刚刚实现的 `SSEClient` 库进行优化
+这个库仅仅实现了非常基本的功能，代码封装上存在很多问题。比如 `es` 的事件全部杂糅在 `subscribe` 方法中、缺少 `SSE` 连接建立失败的重试等等功能。接下来我们对刚刚实现的 `SSEClient` SDK 进行优化
 
 ```js
 const defaultOptions = {
@@ -269,8 +268,7 @@ class SSEClient {
 我们将 `SSEClient` 中的三个事件方法分别提取为三个私有方法，`_onOpen` 方法在 event 触发 open 时调用，向控制台输出链接已经创建。
 `_onMessage` 方法在后端向前端发送数据时触发，负责解析数据，并调用 `handler` 方法。`_onError` 方法在 SSE 发生错误时触发，
 会在控制台输出错误的提示，根据开发者传入的重试次数，先关闭上一次的 SSE 链接，取消所有的事件监听，关闭定时器，
-再开启递归调用 `subscribe` 方法进行重连， 一旦重连成功，重试次数恢复为设定的重试次数，如果超过重试次数依旧没有连接成功
-那么 `SSE` 会彻底终止。需要开发人员排查具体原因
+再开启递归调用 `subscribe` 方法进行重连， 一旦重连成功，重试次数恢复为设定的重试次数，如果超过重试次数依旧没有连接成功，那么 `SSE` 会彻底终止。需要开发人员排查具体原因
 
 一个可以用在项目上的简单 `SSE` SDK 封装完
 
@@ -350,7 +348,7 @@ module.exports = {
 
 做完上面的步骤后，`eventsource` 可以在浏览器中正常运行
 
-如果不想改动 webpack 的配置，那么可以试试 `event-source-polyfill` 这个库
+如果不想改动 `webpack` 的配置，那么可以试试 `event-source-polyfill` 这个库
 
 ### event-source-polyfill
 
@@ -373,7 +371,7 @@ es.addEventListener("message", (event) => {
 ### 不足之处
 
 `eventsource` 和 `event-source-polyfill` 只是在一定的程度上解决了 `Authorization token` 的问题，但它们也存在问题。
-这两个库并不能提供的 `close` 方法只能关闭处于 `pending` 状态的 SSE 连接，因为 fetch 一旦从 `pending` 变为 `resolved`
+这两个库提供的 `close` 方法只能关闭处于 `pending` 状态的 SSE 连接，因为 fetch 一旦从 `pending` 变为 `resolved`
 或 `reject`, 其结果无法改变。当频繁的断开 SSE 连接和建立新 SSE 连接时，旧的 SSE 连接实际上并没有关闭，系统里会存在多个
 SSE 连接，这样会带来很大的性能开销
 
