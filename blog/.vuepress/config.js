@@ -70,4 +70,5 @@ module.exports = {
     updatePopup: true,
   },
   plugins: [],
+  head: [["link", { rel: "shortcut icon", type: "image/x-icon", href: "favicon.jpeg" }]],
 };
