@@ -1,3 +1,26 @@
+const nav = [
+  {
+    text: "首页",
+    link: "/",
+  },
+  {
+    text: "标签",
+    link: "/tag/",
+  },
+  {
+    text: "读书",
+    link: "/read/",
+  },
+  {
+    text: "笔记",
+    link: "/notes/",
+  },
+  {
+    text: "关于我",
+    link: "/about/",
+  },
+];
+
 module.exports = {
   title: "qinghuanI", // Title for the site. This will be displayed in the navbar.
   theme: "@vuepress/theme-blog",
@@ -5,29 +28,7 @@ module.exports = {
   base: "/",
   themeConfig: {
     // Please keep looking down to see the available options.
-    nav: [
-      {
-        text: "首页",
-        link: "/",
-      },
-      // {
-      //   text: "标签",
-      //   link: "/tag/",
-      // },
-      // TODO: support it in coming soon
-      {
-        text: "读书",
-        link: "/read/",
-      },
-      {
-        text: "笔记",
-        link: "/notes/",
-      },
-      {
-        text: "关于我",
-        link: "/about/",
-      },
-    ],
+    nav,
     sidebar: {
       "/read/": [""],
       "/notes": [""],
@@ -39,10 +40,6 @@ module.exports = {
           type: "github",
           link: "https://github.com/qinghuanI",
         },
-        {
-          type: "mail",
-          link: "1062217965@qq.com",
-        },
       ],
       copyright: [
         {
@@ -50,7 +47,7 @@ module.exports = {
           link: "https://policies.google.com/privacy?hl=en-US",
         },
         {
-          text: "MIT Licensed | Copyright © 2020-present qinghuanI",
+          text: "Copyright© 2019-present qinghuanI",
         },
       ],
     },
