@@ -1,1 +1,1 @@
-记录读后感
+<ReadArticleList :list="$site.pages"/>
