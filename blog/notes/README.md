@@ -1,1 +1,1 @@
-记录笔记
+<NoteList :list="$site.pages"/>
