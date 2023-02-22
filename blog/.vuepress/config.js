@@ -22,7 +22,7 @@ const nav = [
 ];
 
 module.exports = {
-  title: "qinghuanI", // Title for the site. This will be displayed in the navbar.
+  title: "学习概念而不是语言", // Title for the site. This will be displayed in the navbar.
   theme: "@vuepress/theme-blog",
   port: 3002,
   base: "/",
