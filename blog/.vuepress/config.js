@@ -12,7 +12,7 @@ const nav = [
     link: "/read/",
   },
   {
-    text: "笔记",
+    text: "随笔",
     link: "/notes/",
   },
   {
