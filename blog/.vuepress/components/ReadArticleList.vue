@@ -4,27 +4,24 @@
   </div>
 </template>
 <script>
-
 import Article from "./Article.vue";
-import {filterRead} from "../utils";
+import { filterRead } from "../utils";
 
 export default {
   name: "ReadArticleList",
   component: {
-    Article
+    Article,
   },
   computed: {
     read: function () {
-      return filterRead(this.list)
-    }
+      return filterRead(this.list);
+    },
   },
-  props: ['list'],
+  props: ["list"],
   created() {
-    console.log(this.read)
-  }
-}
+    console.log(this.read);
+  },
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

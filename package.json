@@ -10,7 +10,8 @@
   "license": "MIT",
   "scripts": {
     "dev": "vuepress dev blog",
-    "build": "vuepress build blog"
+    "build": "vuepress build blog",
+    "prettier": "prettier --write blog"
   },
   "dependencies": {
     "dayjs": "^1.11.7"

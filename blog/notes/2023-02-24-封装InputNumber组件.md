@@ -1,7 +1,7 @@
 ---
 title: 封装 InputNumber 组件
 date: 2023-02-24
-tags: 
+tags:
   - React
 author: qinghuanI
 location: wuhan
@@ -55,16 +55,7 @@ const InputNumber: FC<Props> = (props): JSX.Element => {
     }
   };
 
-  return (
-    <input
-      type="text"
-      max={max}
-      min={min}
-      value={value}
-      onChange={onNumberChange}
-      onBlur={onBlur}
-    />
-  );
+  return <input type="text" max={max} min={min} value={value} onChange={onNumberChange} onBlur={onBlur} />;
 };
 
 export default InputNumber;

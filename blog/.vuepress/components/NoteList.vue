@@ -1,27 +1,30 @@
 <template>
   <div>
-    <Note v-for="item in notes" :title="item.title" :path="item.path" :date="item.frontmatter?.date" :tags="item.frontmatter?.tags" />
+    <Note
+      v-for="item in notes"
+      :title="item.title"
+      :path="item.path"
+      :date="item.frontmatter?.date"
+      :tags="item.frontmatter?.tags"
+    />
   </div>
 </template>
 <script>
-
 import Note from "./Note.vue";
-import {filterNotes} from "../utils";
+import { filterNotes } from "../utils";
 
 export default {
   name: "NoteList",
   component: {
-    Note
+    Note,
   },
   computed: {
     notes: function () {
-      return filterNotes(this.list)
-    }
+      return filterNotes(this.list);
+    },
   },
-  props: ['list'],
-}
+  props: ["list"],
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
