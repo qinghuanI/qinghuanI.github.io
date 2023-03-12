@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>学习概念而不是语言</title>
+        <link>https://qinghuanI.github.io/my-blog</link>
+        <description></description>
+        <lastBuildDate>Sun, 12 Mar 2023 13:50:09 GMT</lastBuildDate>
+        <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+        <generator>https://github.com/webmasterish/vuepress-plugin-feed</generator>
+        <item>
+            <title><![CDATA[解读 classnames 源码]]></title>
+            <link>https://qinghuanI.github.io/my-blog/2019/10/11/%E8%A7%A3%E8%AF%BB-classnames-%E6%BA%90%E7%A0%81/</link>
+            <guid>https://qinghuanI.github.io/my-blog/2019/10/11/%E8%A7%A3%E8%AF%BB-classnames-%E6%BA%90%E7%A0%81/</guid>
+            <pubDate>Fri, 11 Oct 2019 00:00:00 GMT</pubDate>
+            <description><![CDATA[classnames 库通过 JavaScript 动态控制标签的类名。常用于 react 项目里，用来控制组件的类名。
+它有如下的优点:
+
+避免在组件里写行内样式
+配置性高，比如通过对象动态配置类名
+
+使用方式
+
+我推荐下列使用方式。
+
+// 这是最常见的用法
+classNames("foo", "bar"); // => 'foo bar'
+// ...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[执行上下文与 this 指向]]></title>
+            <link>https://qinghuanI.github.io/my-blog/2020/04/02/%E6%89%A7%E8%A1%8C%E4%B8%8A%E4%B8%8B%E6%96%87%E4%B8%8E-this-%E6%8C%87%E5%90%91/</link>
+            <guid>https://qinghuanI.github.io/my-blog/2020/04/02/%E6%89%A7%E8%A1%8C%E4%B8%8A%E4%B8%8B%E6%96%87%E4%B8%8E-this-%E6%8C%87%E5%90%91/</guid>
+            <pubDate>Thu, 02 Apr 2020 00:00:00 GMT</pubDate>
+            <description><![CDATA[执行上下文又称为执行环境，每当 JS 引擎解析可执行代码时，就会进入一个执行环境。
+
+本篇博客将在浏览器环境下讲述执行上下文。在浏览器环境中，执行上下文分为三种:
+
+全局执行上下文
+   默认的、最基础的执行上下文。不在任何函数中的代码都位于全局执行上下文中。
+
+函数执行上下文
+   每个函数都拥有自己的执行上下文，但是只有在函数被调用的时候才会被创建。一个 ...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[Axios 使用指南]]></title>
+            <link>https://qinghuanI.github.io/my-blog/2020/04/20/axios-%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</link>
+            <guid>https://qinghuanI.github.io/my-blog/2020/04/20/axios-%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</guid>
+            <pubDate>Mon, 20 Apr 2020 00:00:00 GMT</pubDate>
+            <description><![CDATA[Axios 是什么
+
+Axios 是一个基于 promise 的 HTTP 库，可以用在浏览器和 node.js 中。
+
+Axios 优点
+
+Axios 有诸多优点。在详细用法部分，我将结合例子分别讲解
+
+从浏览器中创建 XMLHttpRequests
+从 node.js 创建 http 请求
+支持 Promise API
+拦截请求和响应
+转换请求数据和响应数据 ...]]></description>
+            <enclosure url="http://www.examplebank.com/withdraw?account=Alice&amp;amount=1000&amp;for=Badman">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[谈一谈格式化工具 Prettier]]></title>
+            <link>https://qinghuanI.github.io/my-blog/2020/05/07/%E8%B0%88%E4%B8%80%E8%B0%88%E6%A0%BC%E5%BC%8F%E5%8C%96%E5%B7%A5%E5%85%B7-prettier/</link>
+            <guid>https://qinghuanI.github.io/my-blog/2020/05/07/%E8%B0%88%E4%B8%80%E8%B0%88%E6%A0%BC%E5%BC%8F%E5%8C%96%E5%B7%A5%E5%85%B7-prettier/</guid>
+            <pubDate>Thu, 07 May 2020 00:00:00 GMT</pubDate>
+            <description><![CDATA[工欲善其事必先利其器，一个优秀的工具可以显著提高生产力。前端领域的工具并不多，常用的有 ESLint、stylelint、Prettier 等等。本篇博客简单谈一谈 Prettier。
+
+Prettier 是什么？
+
+Prettier 是一个强约束的代码格式化工具，将原始格式的源代码按照设定的规则进行格式化，
+然后输出格式化后的代码。支持常见的 js、jsx、html、`js ...]]></description>
+            <enclosure url="https://p1-jj.byteimg.com/tos-cn-i-t2oaga2asx/gold-user-assets/2020/5/7/171ee02773eb2e87~tplv-t2oaga2asx-image.image">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[详解 JS 错误类型]]></title>
+            <link>https://qinghuanI.github.io/my-blog/2020/05/26/%E8%AF%A6%E8%A7%A3-js-%E9%94%99%E8%AF%AF%E7%B1%BB%E5%9E%8B/</link>
+            <guid>https://qinghuanI.github.io/my-blog/2020/05/26/%E8%AF%A6%E8%A7%A3-js-%E9%94%99%E8%AF%AF%E7%B1%BB%E5%9E%8B/</guid>
+            <pubDate>Tue, 26 May 2020 00:00:00 GMT</pubDate>
+            <description><![CDATA[bug 是应用程序的重要组成部分，编码过程也是发现 bug，然后解决 bug 的过程。认识和掌握 JavaScript 执行过程中抛出的错误类型，有助于快速定位 bug、解决 bug，写出一个健壮的 JavaScript 程序。
+
+JS 引擎解析流程
+
+JS 引擎解析 JavaScript 代码的过程，分为三个阶段。
+
+词法语法分析
+
+词法分析
+
+JS 引擎先把 javasc ...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[短小精悍的发布订阅库 mitt]]></title>
+            <link>https://qinghuanI.github.io/my-blog/NaN/NaN/NaN/%E7%9F%AD%E5%B0%8F%E7%B2%BE%E6%82%8D%E7%9A%84%E5%8F%91%E5%B8%83%E8%AE%A2%E9%98%85%E5%BA%93-mitt/</link>
+            <guid>https://qinghuanI.github.io/my-blog/NaN/NaN/NaN/%E7%9F%AD%E5%B0%8F%E7%B2%BE%E6%82%8D%E7%9A%84%E5%8F%91%E5%B8%83%E8%AE%A2%E9%98%85%E5%BA%93-mitt/</guid>
+            <pubDate>Wed, 16 Sep 2020 00:00:00 GMT</pubDate>
+            <description><![CDATA[mitt 是一个小而美的发布-订阅库，短短的几十行代码，小于 200b 的体积，提供三个重要的 API。然而麻雀虽小，五脏俱全。
+
+发布-订阅模式
+
+发布-订阅模式定义了一种一对多的依赖关系，让多个订阅者对象同时监听某一个主题对象。这个主题对象在自身状态变化时，
+会通知所有订阅者对象，使它们能够自动更新自己的状态。
+
+用法
+
+有这样的一个需求，小明想买 100w 以内的二手房，小华 ...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[有限集合的创建、映射及过滤]]></title>
+            <link>https://qinghuanI.github.io/my-blog/2021/03/09/%E6%9C%89%E9%99%90%E9%9B%86%E5%90%88%E7%9A%84%E5%88%9B%E5%BB%BA%E3%80%81%E6%98%A0%E5%B0%84%E5%8F%8A%E8%BF%87%E6%BB%A4/</link>
+            <guid>https://qinghuanI.github.io/my-blog/2021/03/09/%E6%9C%89%E9%99%90%E9%9B%86%E5%90%88%E7%9A%84%E5%88%9B%E5%BB%BA%E3%80%81%E6%98%A0%E5%B0%84%E5%8F%8A%E8%BF%87%E6%BB%A4/</guid>
+            <pubDate>Tue, 09 Mar 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[数学中，一个集合被称为有限集合，简单来说就是元素个数有限 ————《维基百科》
+
+通过上面这句话，我们可以清楚的知道，一个有限集合可以通过穷举法将集合里面的数一一例举出来，这是一条非常重要的原则。在 JavaScript 的世界里，类数组(ArrayLike)、数组(Array)和普通对象(Object)可以看作为有限集合，于是乎，我们可以对它们进行创建、映射及过滤操作。
+
+**本篇博客内容在 ...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[浅谈 JS 里的浅拷贝和深拷贝]]></title>
+            <link>https://qinghuanI.github.io/my-blog/2021/07/12/%E6%B5%85%E8%B0%88-js-%E9%87%8C%E7%9A%84%E6%B5%85%E6%8B%B7%E8%B4%9D%E5%92%8C%E6%B7%B1%E6%8B%B7%E8%B4%9D/</link>
+            <guid>https://qinghuanI.github.io/my-blog/2021/07/12/%E6%B5%85%E8%B0%88-js-%E9%87%8C%E7%9A%84%E6%B5%85%E6%8B%B7%E8%B4%9D%E5%92%8C%E6%B7%B1%E6%8B%B7%E8%B4%9D/</guid>
+            <pubDate>Mon, 12 Jul 2021 00:00:00 GMT</pubDate>
+            <description><![CDATA[在 JavaScript 引擎中，对变量的存储有两种方式，栈内存和堆内存。
+
+JavaScript 中的变量分为基本类型和引用类型。一共有八种，分别是:
+
+Undefined
+Null
+Boolean
+String
+Number
+Symbol
+BigInt (新增)
+Object ( ...]]></description>
+            <enclosure url="https://user-images.githubusercontent.com/45612221/77713713-13ac4280-7012-11ea-9a51-14b4763ea524.png">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[Input 使用场景总结]]></title>
+            <link>https://qinghuanI.github.io/my-blog/2023/03/02/input-%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF%E6%80%BB%E7%BB%93/</link>
+            <guid>https://qinghuanI.github.io/my-blog/2023/03/02/input-%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF%E6%80%BB%E7%BB%93/</guid>
+            <pubDate>Thu, 02 Mar 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[在 React 项目中，我们会高频率使用 Input 组件。Input 文本框通常用来获取用户填写的信息，根据用户填写的信息作出对应的业务逻辑
+
+一个简单的 Input 组件在不同的场景下，有不同的使用方式，总的来说有以下几种
+
+输入内容后立马处理逻辑
+
+取项目中的一个真实业务场景，根据关键字过滤列表数据，这就属于在输入框输入内容，立马向后端发送 http 请求，一旦输入框内容更新，再发送 ...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[类型系统之 JS 数据类型]]></title>
+            <link>https://qinghuanI.github.io/my-blog/2020/04/02/%E7%B1%BB%E5%9E%8B%E7%B3%BB%E7%BB%9F%E4%B9%8Bjs%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</link>
+            <guid>https://qinghuanI.github.io/my-blog/2020/04/02/%E7%B1%BB%E5%9E%8B%E7%B3%BB%E7%BB%9F%E4%B9%8Bjs%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</guid>
+            <pubDate>Thu, 02 Apr 2020 00:00:00 GMT</pubDate>
+            <description><![CDATA[在程序设计的类型系统中，数据类型（英语：Data type），又称数据型态、数据型别，是用来约束数据的解释。
+
+数据类型描述了数值的表示法、解释和结构，并以算法操作，或是对象在存储器中的存储区，或者其它存储设备。
+
+高级语言中设计数据类型可以具有如下优点。
+
+方便管理计算机的内存空间，提高运行时效率;
+帮助构建抽象数据类型和模块化;
+构建语言的语义模型。
+
+**数据类型背后隐 ...]]></description>
+        </item>
+        <item>
+            <title><![CDATA[使用 VuePress 制作在线简历]]></title>
+            <link>https://qinghuanI.github.io/my-blog/2023/02/03/%E4%BD%BF%E7%94%A8-vuepress-%E5%88%B6%E4%BD%9C%E5%9C%A8%E7%BA%BF%E7%AE%80%E5%8E%86/</link>
+            <guid>https://qinghuanI.github.io/my-blog/2023/02/03/%E4%BD%BF%E7%94%A8-vuepress-%E5%88%B6%E4%BD%9C%E5%9C%A8%E7%BA%BF%E7%AE%80%E5%8E%86/</guid>
+            <pubDate>Fri, 03 Feb 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[使用在线简历可以让简历更好看，也方便他人浏览，给 HR 和面试官耳目一新的感受
+
+VuePress 是一款基于 Vue 实现的静态网站生成器。有界面简洁优雅，上手简单和扩展 Markdown 语法等优点。
+本篇博客带大家学习如何使用 VuePress 制作自己的在线简历
+
+初始化
+
+首先需要在本地新建在线简历项目
+
+创建并进入一个新目录
+
+mkdir on ...]]></description>
+            <enclosure url="https://cdn.jsdelivr.net/gh/qinghuanI/blog-images@main/uPic/resume_skeleton.png">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[深入浅出 Server-sent events 技术]]></title>
+            <link>https://qinghuanI.github.io/my-blog/2023/02/06/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA-server-sent-events-%E6%8A%80%E6%9C%AF/</link>
+            <guid>https://qinghuanI.github.io/my-blog/2023/02/06/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA-server-sent-events-%E6%8A%80%E6%9C%AF/</guid>
+            <pubDate>Mon, 06 Feb 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[实时获取服务端的数据，大家第一时间想到的是轮询和 WebSocket 两种方案，其实还有一种新方案 Server-sent events
+下文简称（SSE）。SSE 中的数据只能由服务端推向客户端
+
+SSE 是基于 http 协议的服务器推送技术，数据只能从服务端到客户端。服务端把序列化后的数据发送给客户端，
+整个过程持续不断直至连接关闭
+
+WebSocket vs 轮询 vs SSE
+ ...]]></description>
+            <enclosure url="https://cdn.jsdelivr.net/gh/qinghuanI/blog-images@main/uPic/debugger_eventsource.png">
+            </enclosure>
+        </item>
+        <item>
+            <title><![CDATA[Qodana 入门与使用]]></title>
+            <link>https://qinghuanI.github.io/my-blog/2023/02/10/qodana-%E5%85%A5%E9%97%A8%E4%B8%8E%E4%BD%BF%E7%94%A8/</link>
+            <guid>https://qinghuanI.github.io/my-blog/2023/02/10/qodana-%E5%85%A5%E9%97%A8%E4%B8%8E%E4%BD%BF%E7%94%A8/</guid>
+            <pubDate>Fri, 10 Feb 2023 00:00:00 GMT</pubDate>
+            <description><![CDATA[Qodana 是 JetBrains 推出的代码质量检测工具。它将 JetBrains IDE 具有的智能代码检查带入了项目 CI/CD 管道中。它可以识别代码中的错误，安全漏洞，重复项和缺陷并提出修复建议。使开发人员轻松地改善代码结构，使代码符合众多准则和标准，解决潜在的性能问题
+
+Qodana 为您提供项目质量概览，让您设定质量目标并跟踪其进度。您可以快速调整应用于项目的检查列表，并在分析中包 ...]]></description>
+            <enclosure url="https://cdn.jsdelivr.net/gh/qinghuanI/blog-images@main/uPic/qodana_login.png">
+            </enclosure>
+        </item>
+    </channel>
+</rss>
